@@ -13,30 +13,27 @@ public class ShapeTest {
 		shape[5] = new Rectangle(5, 7, "White");
 
 		System.out.println("기본정보");
-		
+
 		for (int i = 0; i < shape.length; i++) {
-			if(shape[i] instanceof Triangle) {
-				 
-				System.out.printf("%s %6.1f %5s\n","Triangle",shape[i].getArea(),shape[i].getColors());
-			}else if(shape[i] instanceof Rectangle) {
-				
-				System.out.printf("%s %5.1f %5s\n","Rectangle",shape[i].getArea(),shape[i].getColors());
+			if (shape[i] instanceof Triangle) {
+
+				System.out.printf("%s %6.1f %5s\n", "Triangle", shape[i].getArea(), shape[i].getColors());
+			} else if (shape[i] instanceof Rectangle) {
+
+				System.out.printf("%s %5.1f %5s\n", "Rectangle", shape[i].getArea(), shape[i].getColors());
 			}
 		}
-			System.out.println();
-			System.out.println("사이즈를 변경 후 정보");
-			for (int i = 0; i < shape.length; i++) {
-				if(shape[i] instanceof Triangle) {
-					((Triangle) shape[i]).setResize(5);
-					 
-					System.out.printf("%s %6.1f %5s\n","Triangle",shape[i].getArea(),shape[i].getColors());
-				}else if(shape[i] instanceof Rectangle) {
-					((Rectangle) shape[i]).setResize(5);
-					
-					System.out.printf("%s %5.1f %5s\n","Rectangle",shape[i].getArea(),shape[i].getColors());
-				}
+		System.out.println();
+		System.out.println("사이즈를 변경 후 정보");
+		for (int i = 0; i < shape.length; i++) {
+			if (shape[i] instanceof Triangle) {
+				((Triangle) shape[i]).setResize(5);
+				System.out.printf("%s %6.1f %5s\n", "Triangle", shape[i].getArea(), shape[i].getColors());
+			} else if (shape[i] instanceof Rectangle) {
+				((Rectangle) shape[i]).setResize(5);
+				System.out.printf("%s %5.1f %5s\n", "Rectangle", shape[i].getArea(), shape[i].getColors());
+			} // 추가 선생님 말씀 
 
-		
 		}
 
 	}
